@@ -21,6 +21,12 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	
+	@RequestMapping("/regist")
+	public String regist() {
+		return "/user/regist";
+	}
 
 	@RequestMapping("/showInfo/{userId}")
 	public String showUserInfo(ModelMap modelMap, @PathVariable Integer userId) {
