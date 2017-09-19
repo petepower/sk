@@ -56,4 +56,9 @@ public class UserServiceImpl extends BaseServiceImpl<AcctUser, Integer> implemen
 		userDao.flush();
 	}
 
+	@Override
+	public AcctUser findByAccount(String account) {
+		return userDao.findByAccount(account);
+	}
+
 }

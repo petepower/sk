@@ -8,10 +8,13 @@
 <%-- <link rel="stylesheet" href="${contextPath }/resources/css/amazeui.css"/>
 <link rel="stylesheet" href="${contextPath }/resources/css/style.css"/> --%>
 <link href="${contextPath }/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+<link href="${contextPath }/resources/bootstrap/css/bootstrap-treeview.css" rel="stylesheet"> 
 
 <!--<![endif]-->
 <script src="${contextPath }/resources/js/jquery.min.js"></script>
 <%-- <script src="${contextPath }/resources/js/amazeui.min.js"></script>
 <script src="${contextPath }/resources/js/scroll.js"></script>  --%>
 <script src="${contextPath }/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="${contextPath }/resources/bootstrap/js/bootstrap-treeview.js"></script>
+
 

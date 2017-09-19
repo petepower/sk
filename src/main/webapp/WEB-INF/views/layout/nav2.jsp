@@ -42,22 +42,27 @@
 			<!--具体菜单项-->
 			<ul id="nav_id_1" class="nav nav-pills navbar-nav "
 				style="margin-left: 300px;">
-				<li role="presentation" class="active"><a
-					href="${contextPath }/home/bs" target="frame_name_2">首页<span
-						class="sr-only">(current)</span></a></li>
-				<li role="presentation"><a href="${contextPath }/home/bs2"
-					target="frame_name_2">数控文库</a></li>
+				<li role="presentation" class="active"><a href="${contextPath }/home/bs" target="frame_name_2">首页<span class="sr-only">(current)</span></a></li>
+				<li role="presentation"><a href="${contextPath }/home/bs2" target="frame_name_2">数控文库</a></li>
 				<li role="presentation"><a href="#">数控软件</a></li>
 				<li role="presentation"><a href="#">数控课堂</a></li>
 				<li role="presentation"><a href="#">数控教程</a></li>
-				<li role="presentation"><a href="#">个人中心</a></li>
+				<li role="presentation"><a href="${contextPath }/user/memberCenter" target="frame_name_2">个人中心</a></li>
 			</ul>
 			<!--搜索表单-->
 
 			<!--导航栏右部，一般的登录 注册-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">登录</a></li>
-				<li><a href="#">注册</a></li>
+				<c:choose>
+					<c:when test="${currentUser != null }">
+					<li><a href="${contextPath }/user/memberCenter" target="frame_name_2">${currentUser.account }</a></li>
+					</c:when>
+				<c:otherwise>
+					<li><a href="${contextPath }/user/login" target="frame_name_2">登录</a></li>
+					<li><a href="${contextPath }/user/registpage" target="frame_name_2">注册</a></li>
+				</c:otherwise>
+				</c:choose>
+				
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

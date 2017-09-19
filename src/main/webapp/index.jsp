@@ -21,12 +21,9 @@
   </head>  
     
   <body>  
-    1234
-    <a href="${contextPath }/index" >进入首页</a>
-    <a href="${contextPath }/index/index2" >进入首页2</a>
-    <a href="${contextPath }/index/index3" >进入首页2</a>
-    <a href="${contextPath }/index/index4" >进入首页4</a>
+  	在这个页面做用户名保存跳转 /index 中判断cookie值
   </body>  
   <script>
+  	window.location.href = "${contextPath }/index";
   </script>
 </html> 

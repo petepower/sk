@@ -25,7 +25,7 @@ public class UserDaoImpl extends BaseDaoImpl<AcctUser,Integer> implements UserDa
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<AcctUser> findAll() {
-		 List<AcctUser> acctUsers = getCurrentSession().createQuery("from AcctUser").setCacheable(true).list();  
+		List<AcctUser> acctUsers = getCurrentSession().createQuery("from AcctUser").setCacheable(true).list();  
 		return acctUsers;
 	}
 
@@ -54,6 +54,14 @@ public class UserDaoImpl extends BaseDaoImpl<AcctUser,Integer> implements UserDa
 	@Override
 	public void flush() {
 		getCurrentSession().flush();  
+	}
+
+	@Override
+	public AcctUser findByAccount(String account) {
+		AcctUser acctUser = (AcctUser) getCurrentSession()  
+	            .createQuery(" from acct_user where account = :account ").setParameter("account", account)  
+	            .uniqueResult();  
+		return acctUser;
 	}
 
 }

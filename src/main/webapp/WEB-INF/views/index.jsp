@@ -9,7 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-	<jsp:include page="./layout/nav2.jsp"></jsp:include>
+	<jsp:include page="./layout/nav.jsp"></jsp:include>
+	<div style="margin-top:100px;"></div>
 	<iframe name="frame_name_2" src="${contextPath }/home/bs" width="100%" height="1500px" frameborder="no" border="0"
 			scrolling="no" allowtransparency="yes"></iframe>
 	<jsp:include page="./layout/footer.jsp"></jsp:include>

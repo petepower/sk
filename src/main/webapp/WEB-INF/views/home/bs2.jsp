@@ -5,10 +5,6 @@
 
 <!---------主体------------------>
 <div class="container" style="margin-top: 100px;">
-	<div class="row">
-	</div>
-	<div class="row">
-	</div>
 	<div class="row" style="border-bottom:1px dotted gray;">
 		<div class="col-sm-2 col-md-2" >
 			<ul class="nav navbar-nav navbar-left"> 
